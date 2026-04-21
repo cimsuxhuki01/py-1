@@ -1,4 +1,4 @@
-# $${\color{blue}Digital School Lessons}$$
+# $${\color{blue}Digital \ School \ Lessons}$$
 > [!NOTE]
 > ### Python Advanced
 

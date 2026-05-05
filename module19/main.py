@@ -1,6 +1,7 @@
 import pandas as pd
-import  streamlit as st
+import streamlit as st
 import plotly.express as px
+
 
 books_df = pd.read_csv('bestsellers_with_categories_2022_03_27.csv')
 
@@ -13,10 +14,10 @@ with st.sidebar.form("book_form"):
     new_author = st.text_input("author")
     new_user_rating = st.slider("user rating", 0.0 ,5.0, 0.0,0.1)
     new_reviews = st.number_input("reviews", min_value=0, step=1)
-    new_price = st.number_input("price", min_value = 0 ,ste=1)
-    new_year = st.number_input("year", min_value=2009 , nax_value=2022, step=1)
-    new_genre = st.selectbox("genre", books_df['genre'].unique)
-    submit_button = st.form_submition_button(label="add book")
+    new_price = st.number_input("price", min_value = 0 ,step=1)
+    new_year = st.number_input("year", min_value=2009 , max_value=2022, step=1)
+    new_genre = st.selectbox("genre", books_df['Genre'].unique())
+    submit_button = st.form_submit_button(label="Add Book")
 
 
 if submit_button:
@@ -63,12 +64,6 @@ if submit_button:
     unique_titles = filtered_books_df['Name'].nunique()
     average_rating = filtered_books_df['User Rating'].mean()
     average_price = filtered_books_df['Price'].mean()
-
-
-    total_books = books_df.shape[0]
-    unique_titles = books_df['Name'].nunique()
-    average_rating = books_df['User Rating'].mean()
-    average_price = books_df['Price'].mean()
 
     col1, col2, col3, col4 = st.columns(4)
 

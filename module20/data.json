@@ -1,0 +1,18 @@
+{
+  "name": "Amar",
+  "age": 16,
+  "address": {
+    "street": "Kodra e Trimave",
+    "city": "Prishtina"
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "amar@gmail.com"
+    },
+    {
+      "type": "phone",
+      "value": "+3836456546345"
+    }
+  ]
+}
